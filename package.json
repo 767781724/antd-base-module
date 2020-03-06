@@ -1,0 +1,38 @@
+{
+  "name": "antd-base-module",
+  "version": "1.0.2",
+  "private": false,
+  "description": "Antd based module",
+  "main": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "build": "webpack --mode production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Leo",
+  "keywords":"antd",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
+    "@types/lodash": "^4.14.149",
+    "@types/react": "^16.9.23",
+    "@types/react-router": "^5.1.4",
+    "antd": "^4.0.1",
+    "clean-webpack-plugin": "^3.0.0",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.8.3",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11"
+  },
+  "devDependencies": {
+    "@types/react-dom": "^16.9.5"
+  },
+  "files": [
+    "dist/",
+    "README.md"
+  ]
+}
