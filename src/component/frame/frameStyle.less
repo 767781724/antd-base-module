@@ -1,0 +1,189 @@
+.slide-bar-view {
+    width: 200px;
+    min-width: 200px;
+    height: 100%;
+    transition: width 0.2s;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    // position: relative;
+    &.slide-bar-ani {
+        width: 0;
+        min-width: 0;
+        overflow: hidden;
+    }
+
+    .slide-bar-header {
+        background-color: #00284D;
+        text-align: center;
+        color: white;
+        font-size: 14px;
+        font-weight: 500;
+        min-height: 60px;
+        line-height: 60px;
+    }
+
+    .slide-bar-main {
+        flex: auto;
+        background-color: #001529;
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+            width: 0px;
+        }
+    }
+
+    .slide-bar-collapse {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 50%;
+        left: 150px;
+        margin-top: -25px;
+        cursor: pointer;
+        z-index: 99;
+        transition: width 0.2s;
+
+        &:hover {
+            .slide-bar-collapse-content {
+                border-bottom: 12px solid transparent;
+                border-left: none;
+                border-right: 20px solid #D9DEE4;
+                border-top: 12px solid transparent;
+            }
+        }
+
+        &.slide-bar-ani {
+            left: 0;
+
+            .slide-bar-collapse-content {
+                border-bottom: 12px solid transparent;
+                border-left: 14px solid #D9DEE4;
+                border-right: none;
+                border-top: 12px solid transparent;
+
+                .icon {
+                    position: absolute;
+                    left: -36px;
+                    top: 18px;
+                    font-weight: bold;
+                }
+            }
+
+            &:hover {
+                .slide-bar-collapse-content {
+                    border-bottom: 12px solid transparent;
+                    border-left: 20px solid #D9DEE4;
+                    border-right: none;
+                    border-top: 12px solid transparent;
+                }
+            }
+        }
+
+        .slide-bar-collapse-content {
+            width: 100%;
+            height: 100%;
+            border-bottom: 12px solid transparent;
+            border-left: none;
+            border-right: 13px solid #D9DEE4;
+            border-top: 12px solid transparent;
+            transition: all 0.2s ease;
+
+            .icon {
+                position: absolute;
+                right: 0;
+                top: 18px;
+                font-size: 14px;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.tabs-page {
+    width: 100%;
+    height: 36px;
+    background-color: #E2E3E6;
+    display: flex;
+    overflow: hidden;
+
+    .tabs-arrow {
+        display: inline-block;
+        background-color: #E2E3E6;
+        opacity: 0;
+        width: 0;
+        line-height: 36px;
+        text-align: center;
+        color: #999999;
+        transition: all 0.3s;
+        cursor: pointer;
+    }
+
+    .tabs-arrow-show {
+        width: 30px;
+        opacity: 1;
+    }
+
+    .tabs-main {
+        flex: 1;
+        overflow: hidden;
+    }
+
+    .tabs-main::-webkit-scrollbar {
+        display: none;
+    }
+
+    .tabs-content {
+        width: max-content;
+        height: 36px;
+        border-bottom: 1px solid #e5e5e5;
+        box-sizing: border-box;
+        white-space: nowrap;
+        transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+
+    .tabs-item {
+        display: inline-block;
+    }
+
+    .tabs-btn {
+        min-width: 70px;
+        max-width: 120px;
+        height: 36px;
+        border-radius: 1px;
+        text-align: center;
+        border: 1px solid #e8e8e8;
+        font-size: 14px;
+        position: relative;
+        cursor: pointer;
+        background-color: #fafafa;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 5px;
+        border-bottom: 1px solid none;
+        >span {
+            display: inline-block;
+            margin-right: 2px;
+            max-width: 80px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+
+    .tabs-btn:hover {
+        >span {
+            color: #1890ff;
+        }
+    }
+
+    .active {
+        background-color: #fff;
+
+        >span {
+            color: #1890ff;
+        }
+    }
+}

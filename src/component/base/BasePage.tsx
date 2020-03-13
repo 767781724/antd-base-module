@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import { Component } from 'react';
 import { RouteComponentProps } from 'react-router';
-import {routeUtils} from '../base_router/RouteUilts';
+import {routeUtils} from '../../RouteUilts';
 
 /**
  * 基础页面类
